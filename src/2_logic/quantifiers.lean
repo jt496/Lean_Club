@@ -1,8 +1,9 @@
 import tactic
+import data.nat.prime
 variables (P Q  : Prop)
 variables (α β : Type)
 variables (R S: ℕ → Prop)
-open function
+open function nat
 
 /-
 # Quantifiers 
