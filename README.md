@@ -7,7 +7,7 @@ Ideally you should install Lean3 and VScode on your own machine following these 
 
 Once installed open a terminal in the directory where you would like to store Lean project files and run:
 
-  leanproject get jt496/Lean_Club
+    leanproject get jt496/Lean_Club
 
 
 An alternative is to use Gitpod (and Chrome) via the following link: https://gitpod.io/#https://github.com/jt496/Lean_Club
