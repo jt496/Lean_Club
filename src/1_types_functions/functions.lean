@@ -105,7 +105,7 @@ y : B
 z : C
 ⊢ B
 -/
-  sorry,
+  exact y,
 end
 
 /-
