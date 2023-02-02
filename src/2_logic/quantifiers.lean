@@ -1,5 +1,5 @@
 import tactic
-import data.nat.prime
+import data.nat.prime_norm_num
 variables (P Q  : Prop)
 variables (α β : Type)
 variables (R S: ℕ → Prop)
