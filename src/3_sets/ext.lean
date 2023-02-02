@@ -87,7 +87,7 @@ end
 # have 
 
 In our next example it is useful to prove an intermediate result. 
-To do this we recall the tactic: `have`. 
+To do this we use the tactic: `have`. 
 
 The general form of this tactic is as follows:
 If we want to prove a proposition `P` we do the following: 
@@ -104,7 +104,7 @@ example : A ∪ B ⊆ B ∪ C → A \ B ⊆ C :=
 begin
   intros h x hab,
   cases hab with ha hnb,
-  have h2: x ∈ A ∪ B,
+  have h2 : x ∈ A ∪ B,
   {
     sorry,
   },
