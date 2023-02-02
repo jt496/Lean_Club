@@ -226,7 +226,7 @@ begin
   sorry,
 end
 
--- 22 
+-- 22 -- symmetry may be useful here..
 example (f: A → ℕ) (x y : A) (hf : f x = f y → x = y) 
 (hfx: f x = n) (hfy: f y = m) (heq: m = n) : x = y:=
 begin  
