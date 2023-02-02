@@ -2,7 +2,7 @@ import tactic
 import data.complex.basic
 import data.real.basic
 import data.real.irrational
-import data.nat.basic
+import data.nat.prime_norm_num
 import algebra.group.ext
 variables (α β γ R : Type)
 variables (A B C : set α)

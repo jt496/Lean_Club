@@ -1,5 +1,5 @@
 import tactic           -- import all the tactics
-import data.nat.basic   -- import ℕ natural numbers 
+import data.nat.prime_norm_num   -- import ℕ natural numbers 
 import data.real.basic  -- import ℝ real numbers
 import data.real.irrational  -- allows us to talk about irrational numbers
 
