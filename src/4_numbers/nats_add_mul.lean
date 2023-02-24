@@ -186,14 +186,14 @@ begin
   sorry,
 end
 
-lemma Succ_mul (m n : ℕ) : n.succ * m =  n * m + m:=
+lemma Succ_mul (m n : ℕ) : m.succ * n = m * n + n:=
 begin
-  induction m with m hm,
+  induction n with n hn,
   {
     sorry
   },
   {
-    sorry
+    sorry,
   },
 end
 
