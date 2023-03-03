@@ -7,7 +7,8 @@ Main theorem: `parity_adj_imp_odd_cycle`
 If a connected graph G has an edge xy joining vertices that are both an even (or both odd) distance 
 from a vertex z then G contains an odd cycle.
 
-Corollary : If G is connected and does not contain an odd cycle then G is two-colourable (by parity from an arbitray vertex)
+Corollary : 
+If G is connected and does not contain an odd cycle then G is two-colourable (by parity from an arbitary vertex)
 
 
 
@@ -370,7 +371,7 @@ begin
 -- but if it were then the shortest paths from x to z and y to z would differ in length by exactly 1 and hence 
 -- 2 could not divide the sum of their lengths
   intro hf, apply shortcut_edge_imp hconn hp1 hp2 hf he,
--- now just need to check that the length of the cycle is infact odd 
+-- now just need to check that the length of the cycle is in fact odd 
   rw [shortcut,walk.length_cons, walk.length_append], 
   rw [triangle_eq hconn p1 hp1 (meet_mem p1 p2),triangle_eq hconn p2 hp2 ((meet_mem' p1 p2))] at he,
   rw [add_comm (G.dist y (meet p1 p2)),←add_assoc,add_comm _ (G.dist (meet p1 p2) z),add_comm (G.dist x (meet p1 p2)),←add_assoc,←two_mul] at he,
@@ -382,7 +383,7 @@ end
 
 /-- If G is connected and z ∈ V then we can try to define a 2-colouring by distance from z using "bool = {tt, ff}"-/
 noncomputable 
-def colour_bool (hconn : G.connected) (z : V): V → bool :=λ x, ite (even (G.dist x z)) tt ff  
+def colour_bool (hconn : G.connected) (z : V): V → bool := λ x, ite (even (G.dist x z)) tt ff  
 
 /-- G has no_odd_cycle iff -/
 def no_odd_cycle (G: simple_graph V): Prop := ¬ ∃ (v:V), ∃ (c: G.walk v v), c.is_cycle ∧ odd c.length
@@ -415,9 +416,7 @@ def two_colouring (hconn : G.connected) (z : V) (nodd: G.no_odd_cycle) :
 lemma chromatic_number_le_two_of_no_odd_cycle (hconn : G.connected) (z : V) (nodd: G.no_odd_cycle) : 
 G.chromatic_number ≤ 2:=
 begin
-  have :=coloring.to_colorable (two_colouring hconn z nodd),
-  rw fintype.card_bool at this, 
-  exact  chromatic_number_le_of_colorable this,
+  exact chromatic_number_le_of_colorable (coloring.to_colorable (two_colouring hconn z nodd)),
 end
 
 end simple_graph
